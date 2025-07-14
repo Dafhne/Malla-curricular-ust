@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Curricular - Ingeniería en Prevención de Riesgos</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      padding: 2rem;
+      margin: 0;
+    }
+    h1 {
+      text-align: center;
+      color: #b30059;
+      margin-bottom: 40px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      max-width: 1300px;
+      margin: 0 auto 80px auto;
+    }
+    .ramo {
+      padding: 12px;
+      border-radius: 8px;
+      color: #000;
+      text-align: center;
+      font-size: 0.9em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      user-select: none;
+    }
+    .ramo.completed {
+      text-decoration: line-through;
+      background-color: #f2f2f2 !important;
+      color: #888;
+    }
+
+    /* Colores según tipo */
+    .especialidad { background-color: #f9b2d3; }
+    .basicas { background-color: #d9d9d9; }
+    .personales { background-color: #a7d3f2; }
+    .sello { background-color: #c8e6c9; }
+    .certificacion { background-color: #b6e7a6; border: 2px solid #4caf50; font-weight: bold; }
+
+    /* Adaptabilidad móvil */
+    @media screen and (max-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media screen and (max-width: 480px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Malla Curricular - Ingeniería en Prevención de Riesgos</h1>
+
+  <div class="grid">
+    <!-- Año 1 - Bimestres 1 al 5 -->
+    <div class="ramo especialidad" onclick="toggle(this)">Marco Legal en la Prevención de Riesgos</div>
+    <div class="ramo personales" onclick="toggle(this)">Herramientas de Informática</div>
+    <div class="ramo basicas" onclick="toggle(this)">Física Aplicada</div>
+    <div class="ramo basicas" onclick="toggle(this)">Química Aplicada</div>
+    <div class="ramo sello" onclick="toggle(this)">Técnicas de Investigación</div>
+
+    <div class="ramo especialidad" onclick="toggle(this)">Gestión de Riesgos Laborales</div>
+    <div class="ramo sello" onclick="toggle(this)">Taller Comunicación</div>
+    <div class="ramo especialidad" onclick="toggle(this)">Legislación en Seguridad</div>
+    <div class="ramo especialidad" onclick="toggle(this)">Riesgos Físicos y Biológicos</div>
+    <div class="ramo especialidad" onclick="toggle(this)">Riesgos Químicos</div>
+
+    <div class="ramo basicas" onclick="toggle(this)">Nivelación Matemática</div>
+    <div class="ramo sello" onclick="toggle(this)">Inglés Básico I</div>
+    <div class="ramo sello" onclick="toggle(this)">Inglés Básico II</div>
+    <div class="ramo sello" onclick="toggle(this)">Salud Ocupacional</div>
+    <div class="ramo certificacion" onclick="toggle(this)">Certificación Nivel 1</div>
+
+    <!-- Año 2 -->
+    <div class="ramo especialidad" onclick="toggle(this)">Programa de Prevención de Riesgos</div>
+    <div class="ramo especialidad" onclick="toggle(this)">Riesgos por Fuentes Energéticas</div>
+    <div class="ramo especialidad" onclick="toggle(this)">Materiales Peligrosos</div>
+    <div class="ramo especialidad" onclick="toggle(this)">Control de Emergencias</div>
+    <div class="ramo especialidad" onclick="toggle(this)">Riesgos en Procesos Productivos</div>
+
+    <div class="ramo personales" onclick="toggle(this)">Preparación Laboral</div>
+    <div class="ramo personales" onclick="toggle(this)">Desarrollo Personal I</div>
+    <div class="ramo sello" onclick="toggle(this)">Psicología de la Seguridad</div>
+    <div class="ramo especialidad" onclick="toggle(this)">Interpretación de Planos</div>
+    <div class="ramo sello" onclick="toggle(this)">Capacitaciones Organizacionales</div>
+
+    <div class="ramo basicas" onclick="toggle(this)">Probabilidades y Estadística</div>
+    <div class="ramo sello" onclick="toggle(this)">Ética Profesional</div>
+    <div class="ramo certificacion" onclick="toggle(this)">Certificación Nivel 2</div>
+
+    <!-- Año 3 -->
+    <div class="ramo especialidad" onclick="toggle(this)">Sistema de Gestión de Calidad</div>
+    <div class="ramo especialidad" onclick="toggle(this)">Gestión de Seguridad y Salud</div>
+    <div class="ramo especialidad" onclick="toggle(this)">Sistemas Integrados de Gestión</div>
+    <div class="ramo especialidad" onclick="toggle(this)">Auditorías Integradas</div>
+    <div class="ramo especialidad" onclick="toggle(this)">Manejo de Residuos Industriales</div>
+
+    <div class="ramo basicas" onclick="toggle(this)">Cálculo I</div>
+    <div class="ramo sello" onclick="toggle(this)">Inglés Intermedio I</div>
+    <div class="ramo sello" onclick="toggle(this)">Inglés Intermedio II</div>
+    <div class="ramo especialidad" onclick="toggle(this)">Producción Limpia</div>
+    <div class="ramo sello" onclick="toggle(this)">Gestión Ambiental</div>
+
+    <div class="ramo sello" onclick="toggle(this)">Cultura y Valores</div>
+    <div class="ramo certificacion" onclick="toggle(this)">Certificación Nivel 3</div>
+
+    <!-- Año 4 -->
+    <div class="ramo sello" onclick="toggle(this)">Administración de Organizaciones</div>
+    <div class="ramo sello" onclick="toggle(this)">Formulación de Proyectos</div>
+    <div class="ramo sello" onclick="toggle(this)">Electivo Sector Regional</div>
+    <div class="ramo certificacion" onclick="toggle(this)">Práctica Profesional</div>
+    <div class="ramo certificacion" onclick="toggle(this)">Proyecto de Título</div>
+
+    <div class="ramo sello" onclick="toggle(this)">Costos y Presupuesto</div>
+    <div class="ramo especialidad" onclick="toggle(this)">Estrategias de Prevención</div>
+    <div class="ramo especialidad" onclick="toggle(this)">Ventilación Industrial</div>
+  </div>
+
+  <script>
+    function toggle(el) {
+      el.classList.toggle("completed");
+    }
+  </script>
+</body>
+</html>
